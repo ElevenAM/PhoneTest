@@ -16,10 +16,10 @@ const returnPhoneWords = function(input){
   const inputSplit = input.toString().split('');
   const validDigits = inputSplit.filter(numbers => numbers !== "0" && numbers !== "1");
 
-  const createCombinations = function(i, nextLetter, currentCombos) {
+  const createCombinations = function(i, nextNumber, currentCombos) {
     let newCombos = [];
     currentCombos.forEach(function(combo){
-        numMap[nextLetter].forEach(function(number){
+        numMap[nextNumber].forEach(function(number){
             newCombos.push(combo + number);
         })
       }
